@@ -184,7 +184,7 @@ public class Vote implements Runnable, Listener {
         countDown--;
         if (countDown == -1) {
             bar.progress(1.0f);
-            if (yes > no) {
+            if (yes > 0.6 * playerCount) {
                 bar.name(messages.afterVote().votePassedBossBar());
                 bar.color(BossBar.Color.GREEN);
                 updateAll(messages.afterVote().votePassedBossBar(voteTypeString()));
@@ -213,7 +213,7 @@ public class Vote implements Runnable, Listener {
             voters = null;
             fastForward = null;
             voteType = null;
-            timer = yes > no ? Timer.OFF : Timer.COOLDOWN;
+            timer = yes > 0.6 * playerCount ? Timer.OFF : Timer.COOLDOWN;
         }
     }
 
