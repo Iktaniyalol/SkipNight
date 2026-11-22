@@ -97,7 +97,7 @@ public class SkipNight extends JavaPlugin {
                 ExecutionCoordinator.coordinatorFor(ExecutionCoordinator.nonSchedulingExecutor())
         );
         // Register Brigadier, fallback to asynchronous completions
-        if (commandManager.hasCapability(CloudBukkitCapabilities.NATIVE_BRIGADIER) && !testEnabled) commandManager.registerBrigadier();
+        if (commandManager.hasCapability(CloudBukkitCapabilities.BRIGADIER) && !testEnabled) commandManager.registerBrigadier();
         else if (commandManager.hasCapability(CloudBukkitCapabilities.ASYNCHRONOUS_COMPLETION)) commandManager.registerAsynchronousCompletions();
         // Create Commands
         if (config.isSkipNight() || testEnabled)
