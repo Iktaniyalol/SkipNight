@@ -84,7 +84,15 @@
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-api</artifactId>
-            <version>5.2.0</version>
+            <version>4.26.1</version>
+        </dependency>
+        <!-- Compile-time closure shim: 5.2-only classes required by paper-api 26.2 hierarchies.
+             provided scope, never shaded - runtime shading stays on the 4.x line -->
+        <dependency>
+            <groupId>net.kyori</groupId>
+            <artifactId>adventure-api52-shim</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.kyori</groupId>
@@ -94,12 +102,12 @@
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-text-serializer-legacy</artifactId>
-            <version>5.2.0</version>
+            <version>4.26.1</version>
         </dependency>
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-text-minimessage</artifactId>
-            <version>5.2.0</version>
+            <version>4.26.1</version>
         </dependency>
         <!-- For Nullable -->
         <dependency>
