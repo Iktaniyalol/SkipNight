@@ -251,6 +251,12 @@
                                 <exclude>META-INF/versions/16/</exclude>
                             </excludes>
                         </filter>
+                        <filter>
+                            <artifact>org.incendo:cloud-bukkit</artifact>
+                            <excludes>
+                                <exclude>org/incendo/cloud/bukkit/parser/ItemStackParser*.class</exclude>
+                            </excludes>
+                        </filter>
                     </filters>
                 </configuration>
 
