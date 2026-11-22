@@ -59,7 +59,7 @@ public class Vote implements Runnable, Listener {
     public void onLogoff(PlayerQuitEvent event) {
         Player player = event.getPlayer();
 
-        if (timer != Timer.OFF) // vote is running
+        if (timer != Timer.OFF && voteType != null) // vote is running
             if (player.hasPermission("skipnight.vote." + voteTypeCommandString(voteType))) { // player has permission
                 voters.remove(player.getUniqueId());
             }
