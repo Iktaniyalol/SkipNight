@@ -299,6 +299,12 @@
                                 <exclude>org/incendo/cloud/bukkit/parser/ItemStackParser*.class</exclude>
                             </excludes>
                         </filter>
+                        <filter>
+                            <artifact>org.incendo:cloud-paper</artifact>
+                            <excludes>
+                                <exclude>org/incendo/cloud/paper/suggestion/tooltips/ReflectiveCompletionMapper*.class</exclude>
+                            </excludes>
+                        </filter>
                     </filters>
                 </configuration>
 

@@ -448,7 +448,7 @@ public class Vote implements Runnable, Listener {
 
     // Checks whether player is in overworld
     private boolean isInOverworld(Player player) {
-        return timer == Timer.OFF ? player.getWorld().getEnvironment() == World.Environment.NORMAL : player.getWorld().equals(voteInitiator.getWorld());
+        return timer == Timer.OFF ? player.getWorld().getEnvironment() == World.Environment.NORMAL : player.getWorld().equals(world);
     }
 
     public String voteTypeString() {
